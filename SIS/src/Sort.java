@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Sort {
-
-
 	
 	public static void run()
 	{
