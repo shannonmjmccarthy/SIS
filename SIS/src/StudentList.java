@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.io.IOException;
 
 public class StudentList {
+	Scanner studentFile = new Scanner(new File(studentlist.txt));
 	ArrayList<Student> studentList = new ArrayList<>();
-	readFile();
-    public static void readFile() {
-    	Scanner studentFile = new Scanner(new File(“studentlist.txt”));
+	fill();
+    public static void fill() {
     	while(studentFile.hasNext())
     	{
     	String firstName = studentFile.next();
@@ -19,7 +19,7 @@ public class StudentList {
     	String secondGrade = studentFile.next();
     	String thirdClass = studentFile.next();
     	String thirdGrade = studentFile.next();
-    	studentList.add(new Student ) 
+    	studentList.add(new Student  (firstName, lastName, gpa,  firstClass ,  firstGrade ,  secondClass ,  secondGrade ,  thirdClass ,  thirdGrade )); 
     	}
 
 	}
