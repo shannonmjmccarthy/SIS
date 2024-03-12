@@ -28,6 +28,10 @@ public class Sort {
 	public static void lastName()
 	{
 		System.out.println("last name");
+		for(int i=0; i<StudentList.studentList.size(); i++)
+		{
+			
+		}
 	}
 	
 	public static void GPA()

@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.io.IOException;
 
 public class StudentList {
+	static ArrayList<Student> studentList = new ArrayList<>();
 	
     public static void fillArray() throws IOException
     {
 
     	Scanner studentFile = new Scanner(new File("studentlist.txt"));
-    	ArrayList<Student> studentList = new ArrayList<>();
     	while(studentFile.hasNext())
     	{
     	String firstName = studentFile.next();
