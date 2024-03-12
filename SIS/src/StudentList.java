@@ -8,7 +8,7 @@ public class StudentList {
     public static void fillArray() throws IOException
     {
 
-    	Scanner studentFile = new Scanner(new File(studentlist2.txt));
+    	Scanner studentFile = new Scanner(new File("studentlist.txt"));
     	ArrayList<Student> studentList = new ArrayList<>();
     	while(studentFile.hasNext())
     	{
