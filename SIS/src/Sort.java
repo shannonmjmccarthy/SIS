@@ -1,10 +1,12 @@
 import java.util.Collections;
 import java.util.Scanner;
+import java.io.IOException;
 
 public class Sort {
 	
-	public static void run()
+	public static void run() throws IOException
 	{
+		StudentList.fillArray();
 		System.out.println("Sort Students:");
 		System.out.println("1) sort by last name");
 		System.out.println("2) sort by GPA");
@@ -14,7 +16,8 @@ public class Sort {
 		
 		if(option == 1)
 		{
-			lastName();
+			//Collections.sort(StudentList.studentList, new NameSorter());
+			NameSort.compare();
 		}
 		else if(option == 2)
 		{
@@ -28,31 +31,7 @@ public class Sort {
 	
 	public static void lastName()
 	{
-		int[] students = new int[StudentList.studentList.size()];
-		for(int i=0; i<StudentList.studentList.size(); i++)
-		{
-			students[i] = Integer.parseInt(StudentList.studentList.get(i).getLastName().substring(0,1));
-		}
-		
-		for (int i = 0; i < students.length-1; i++)
- 		{
-			int minIndex = i;
-			for (int j = i + 1; j < students.length; j++)
- 			{
-				if (students[j] < students[minIndex])
-				{
-					minIndex = j;
- 				}
- 			}
-			int temp = students[i];
-			students[i] = students[minIndex];
-			students[minIndex] = temp;
- 		}
-		
-		for(int i=0; i<StudentList.studentList.size(); i++)
-		{
-			System.out.println(students[i]);
-		}
+		System.out.println(StudentList.studentList.get(0).getFirstName());
 
 		 
 		
