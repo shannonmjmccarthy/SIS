@@ -6,9 +6,4 @@ public class NameSorter implements Comparator<Student>
 		{
 			return s1.getLastName().compareTo(s2.getLastName());
 		}
-		
-		public static void compare()
-		{
-			
-		}
 	}

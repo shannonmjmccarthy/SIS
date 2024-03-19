@@ -7,6 +7,7 @@ public class Sort {
 	public static void run() throws IOException
 	{
 		StudentList.fillArray();
+		System.out.println(StudentList.studentList.get(1).getGpa());
 		System.out.println("Sort Students:");
 		System.out.println("1) sort by last name");
 		System.out.println("2) sort by GPA");
@@ -16,8 +17,8 @@ public class Sort {
 		
 		if(option == 1)
 		{
-			//Collections.sort(StudentList.studentList, new NameSorter());
-			NameSort.compare();
+			Collections.sort(StudentList.studentList, new NameSorter());
+			
 		}
 		else if(option == 2)
 		{
